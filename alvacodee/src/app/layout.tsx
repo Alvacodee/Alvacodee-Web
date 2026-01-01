@@ -23,6 +23,14 @@ export const metadata: Metadata = {
     url: "https://alvacodee-web.vercel.app", // Ganti kalau nanti beli domain
     siteName: "Zahran Alvan Portfolio",
     type: "website",
+    images: [
+      {
+        url: "https://alvacodee-web.vercel.app/images/alvacodee.png",
+        width: 1200,
+        height: 630,
+        alt: "Zahran Alvan Profile",
+      },
+    ], 
   },
 };
 export default function RootLayout({
