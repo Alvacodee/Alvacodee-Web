@@ -104,19 +104,19 @@ export default function TabSection() {
             title="Explorer - Google Developer Student Clubs ITB" 
             subtitle="Path AI"
             date="Apr 2025 - Present"
-            desc="Actively exploring Computer Vision and NLP topics. Collaborating on weekly papers review and implementing basic ML models."
+            desc="Completed an intensive curriculum Intro to AI and Python untill From NLP to LLM."
         />
         <Card 
             title="Staff - Wisuda Oktober HMIF ITB 2025" 
             subtitle="Sponsorship Division"
             date="Sept 2025 - Oct 2025"
-            desc="Mentored 20+ students in practical sessions, graded assignments, and explained core concepts like Data Structures and Memory Management."
+            desc="Managed a database of 50+ potential sponsors using spreadsheets to track outreach progress and funding status. Coordinated with external stakeholders to ensure mutually beneficial agreements for the graduation event. Executed strategic outreach to over 50+ potential corporate partners and startups to secure funding for the event."
         />
         <Card 
             title="Tutor - Asrama ITB Jatinangor" 
             subtitle="Discipline and Environmental Health"
             date="July 2025 - Present"
-            desc="Collaborated with a team of 5 to develop the event landing page using React & Tailwind. Managed participant database using SQL."
+            desc="Managed cleanliness and orderliness of dormitory environment for 100+ residents. Organized regular health and hygiene campaigns to promote well-being among residents."
         />
       </div>
     ),
