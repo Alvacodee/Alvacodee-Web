@@ -50,7 +50,7 @@ export default function TabSection() {
       <div className="grid gap-6 md:grid-cols-2">
         <ProjectCard 
             title="Alvacodee Portfolio Website"
-            tech="Next.js • Tailwind CSS • Vercel"
+            tech="Next.js • TypeScript • Tailwind CSS • Git & GitHub • Vercel"
             desc="Create a minimalist portfolio website."
             link="https://github.com/Alvacodee/Alvacodee-Web"
         />
