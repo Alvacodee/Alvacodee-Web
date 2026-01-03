@@ -42,7 +42,7 @@ Clone repository ini dan masuk ke direktori proyek:
 
 ```bash
 # Clone repository
-git clone [https://github.com/username-kamu/alvacodee-web.git](https://github.com/username-kamu/alvacodee-web.git)
+git clone https://github.com/Alvacodee/Alvacodee-Web.git
 
 # Masuk ke folder
 cd alvacodee-web
