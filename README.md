@@ -1,8 +1,8 @@
 # 🌐 Alvacodee Web
 
 ![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen)
-![Framework](https://img.shields.io/badge/Next.js-14-black)
-![Styling](https://img.shields.io/badge/Tailwind_CSS-3.0-blue)
+![Framework](https://img.shields.io/badge/Next.js-16-black)
+![Styling](https://img.shields.io/badge/Tailwind_CSS-4.0-blue)
 
 **Alvacodee Web** adalah personal website dan portofolio digital yang dirancang untuk menampilkan showcase proyek *Software Engineering*, artikel teknis, dan perjalanan karir di bidang Data Science & AI.
 
@@ -77,7 +77,7 @@ Gambaran singkat struktur folder proyek ini:
 Proyek ini dibuat oleh Zahran Alvan Putra Winarko, mahasiswa Informatika yang tertarik pada Software Engineering, Data, dan AI.
 
 * LinkedIn: https://www.linkedin.com/in/zahran-alvan-putra-winarko
-* Email : zahranalvan2901@gmail.com
-* GitHub github.com/Alvacodee
+* Email: zahranalvan2901@gmail.com
+* GitHub: github.com/Alvacodee
 
 © 2026 Alvacodee Web. All Rights Reserved.
