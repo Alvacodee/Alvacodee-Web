@@ -78,6 +78,6 @@ Proyek ini dibuat oleh Zahran Alvan Putra Winarko, mahasiswa Informatika yang te
 
 * LinkedIn: https://www.linkedin.com/in/zahran-alvan-putra-winarko
 * Email: zahranalvan2901@gmail.com
-* GitHub: github.com/Alvacodee
+* GitHub: https://github.com/Alvacodee/Alvacodee-Web
 
 © 2026 Alvacodee Web. All Rights Reserved.
