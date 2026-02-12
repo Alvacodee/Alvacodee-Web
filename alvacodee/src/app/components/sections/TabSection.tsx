@@ -63,7 +63,7 @@ export default function TabSection() {
         <ProjectCard 
             title="DUITKUDW | Finance Tracker App"
             tech="React • Go • Python • PostgreSQL • Docker • Vercell • Koyeb • Supabase"
-            desc="DUITKUDW adalah pencatatan keuangan yang dirancang untuk membantu pengguna terutama mahasiswa mengelola keuangan pribadi. Aplikasi ini tidak hanya mencatat transaksi, tetapi juga dilengkapi dengan AI Financial Consultant yang mampu memprediksi pengeluaran bulan depan menggunakan algoritma Machine Learning yang adaptif."
+            desc="DUITKUDW is a financial record-keeping app designed to help users, especially students, manage their personal finances. This app not only records transactions but also features an AI Financial Consultant that can predict next month's expenses using adaptive machine learning algorithms."
             link="https://github.com/Alvacodee/DUITKUDW"
         />
         <ProjectCard 
