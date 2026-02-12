@@ -61,10 +61,10 @@ export default function TabSection() {
             link="https://github.com/Alvacodee/Sistem-Manajemen-Rumah-Sakit"
         />  
         <ProjectCard 
-            title="Pokemon Game"
-            tech="Prolog"
-            desc="Build a Pokemon Game using Prolog."
-            link="https://github.com/Alvacodee/Game-Pokemon"
+            title="DUITKUDW | Finance Tracker App"
+            tech="React • Go • Python • PostgreSQL • Docker • Vercell • Koyeb • Supabase"
+            desc="DUITKUDW adalah pencatatan keuangan yang dirancang untuk membantu pengguna terutama mahasiswa mengelola keuangan pribadi. Aplikasi ini tidak hanya mencatat transaksi, tetapi juga dilengkapi dengan AI Financial Consultant yang mampu memprediksi pengeluaran bulan depan menggunakan algoritma Machine Learning yang adaptif."
+            link="https://github.com/Alvacodee/DUITKUDW"
         />
         <ProjectCard 
             title="GDGoC AI Hands On"
