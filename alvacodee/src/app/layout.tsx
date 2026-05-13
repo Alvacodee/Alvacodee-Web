@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Zahran Alvan | Software Engineer | Data & AI/ML Enthusiast",
   description: "Portfolio Zahran Alvan (Alvacodee). Computer Science student at ITB with Software Engineering, Data Science, and AI/ML focus.",
-  keywords: ["Zahran Alvan", "Alvacodee", "Portfolio", "Software Engineer", "ITB", "Informatika", "Computer Science", "Data Science", "AI/ML", "Web Developer"],
-  authors: [{ name: "Zahran Alvan" }],
+  keywords: ["Zahran Alvan", "Zahran Alvan Putra Winarko","Alvacodee", "Portfolio", "Software Engineer", "ITB", "Informatika", "Computer Science", "Data Science", "AI/ML", "Web Developer"],
+  authors: [{ name: "Zahran Alvan"}, {name: "Zahran Alvan Putra Winarko" }, {name: "Alvacodee" }],
   verification: {
       google: "KSfwgislrB98OUDIEN5SbJRYpA_wJ4DpQHeaCy-22zc",
     },
