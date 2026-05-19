@@ -41,7 +41,7 @@ export default function Hero() {
           My goal is to build a strong foundation in creating scalable applications first, so that in the future, I can integrate intelligent AI/ML models into systems that are not just smart, but also reliable and production-ready.
         </p>
 
-        <a href="/CV_Zahran-Alvan.pdf" download target="_blank" rel="noopener noreferrer">
+        <a href="/Resume_Zahran-Alvan-Putra-Winarko.pdf" download target="_blank" rel="noopener noreferrer">
           <button className="relative px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] hover:-translate-y-1 active:scale-95">
             Download CV
           </button>
