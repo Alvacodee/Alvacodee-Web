@@ -1,41 +1,56 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+"use client";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+import { MediumIcon, KaggleIcon, HuggingFaceIcon } from "@/lib/social-icons";
+import { useLang } from "@/lib/lang-context";
+import { content } from "@/lib/content";
 
 export default function Footer() {
+  const { lang } = useLang();
+  const t = content[lang].footer;
+
+  const socials = [
+    { href: "https://github.com/Alvacodee", icon: <Github size={16} />, label: "GitHub" },
+    { href: "https://linkedin.com/in/zahran-alvan-putra-winarko", icon: <Linkedin size={16} />, label: "LinkedIn" },
+    { href: "mailto:zahranalvan2901@gmail.com", icon: <Mail size={16} />, label: "Email" },
+    { href: "https://www.instagram.com/zahran_alvan/", icon: <Instagram size={16} />, label: "Instagram" },
+    { href: "https://medium.com/@zahranalvan2901", icon: <MediumIcon size={16} />, label: "Medium" },
+    { href: "https://www.kaggle.com/zahranalvan", icon: <KaggleIcon size={16} />, label: "Kaggle" },
+    { href: "https://huggingface.co/Alvacodee", icon: <HuggingFaceIcon size={16} />, label: "HuggingFace" },
+  ];
+
   return (
-    <footer className="border-t border-gray-800 bg-gray-950 py-10">
-      <div className="container mx-auto flex flex-col items-center justify-center gap-6 px-4">
-        
-        {/* Social Links */}
-        <div className="flex gap-8">
-          <a
-            href="https://github.com/Alvacodee" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 hover:text-white hover:scale-110 transition-all duration-300"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            href="https://linkedin.com/in/zahran-alvan-putra-winarko" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 hover:text-blue-500 hover:scale-110 transition-all duration-300"
-          >
-            <Linkedin size={22} />
-          </a>
-          <a
-            href="mailto:zahranalvan2901@gmail.com"
-            className="text-gray-500 hover:text-red-400 hover:scale-110 transition-all duration-300"
-          >
-            <Mail size={22} />
-          </a>
+    <footer
+      className="border-t py-10"
+      style={{ borderColor: "var(--border)", background: "var(--bg)" }}
+    >
+      <div className="mx-auto max-w-6xl flex flex-col items-center gap-5 px-6">
+        {/* Social icons row */}
+        <div className="flex flex-wrap justify-center items-center gap-5">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target={s.href.startsWith("mailto") ? undefined : "_blank"}
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              className="transition-colors"
+              style={{ color: "var(--text-subtle)" }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text)")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-subtle)")}
+            >
+              {s.icon}
+            </a>
+          ))}
         </div>
 
-        {/* Copyright */}
-        <p className="text-sm text-gray-500 text-center">
-          © {new Date().getFullYear()} <span className="text-gray-300 font-semibold">Alvacodee</span>. All rights reserved.
+        {/* Copyright — centered */}
+        <p
+          className="text-xs text-center"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--text-subtle)" }}
+          suppressHydrationWarning
+        >
+          © {new Date().getFullYear()} {t.copy}
         </p>
-
       </div>
     </footer>
   );

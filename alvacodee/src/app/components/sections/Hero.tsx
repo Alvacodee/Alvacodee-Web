@@ -1,51 +1,114 @@
-import Image from "next/image";
+"use client";
+import { FileText, Github, Linkedin, Mail, Instagram } from "lucide-react";
+import { useLang } from "@/lib/lang-context";
+import { content } from "@/lib/content";
 
 export default function Hero() {
-  return (
-    <section 
-      id="about" 
-      className="relative container mx-auto max-w-6xl flex flex-col items-center justify-between gap-10 px-4 py-32 md:flex-row md:gap-28 md:py-40"
-    >
-      
-      {/* BACKGROUND */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[100px] opacity-50"></div>
+  const { lang } = useLang();
+  const t = content[lang].hero;
 
-      {/* LOGO */}
-      <div className="relative flex shrink-0 justify-center group">
-        <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-75 blur transition duration-500 group-hover:opacity-100 animate-pulse"></div>
-        
-        <div className="relative h-72 w-72 overflow-hidden rounded-full border-2 border-gray-800 bg-gray-900 md:h-100 md:w-100">
-          <Image
-            src="/images/Alvan.jpg"
-            alt="Zahran Alvan"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            priority
-          />
-        </div>
+  const socialLinks = [
+    { href: "https://github.com/Alvacodee", icon: <Github size={15} />, label: "GitHub" },
+    { href: "https://linkedin.com/in/zahran-alvan-putra-winarko", icon: <Linkedin size={15} />, label: "LinkedIn" },
+    { href: "mailto:zahranalvan2901@gmail.com", icon: <Mail size={15} />, label: "Email" },
+    { href: "https://www.instagram.com/zahran_alvan/", icon: <Instagram size={15} />, label: "Instagram" },
+  ];
+
+  return (
+    <section id="about" className="relative mx-auto max-w-5xl px-6 pt-32 pb-24">
+      {/* Ambient glow */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden -z-10">
+        <div className="absolute top-16 left-1/3 h-80 w-80 rounded-full blur-[120px] opacity-20" style={{ background: "var(--accent)" }} />
+        <div className="absolute top-40 right-1/4 h-52 w-52 rounded-full blur-[90px] opacity-10" style={{ background: "var(--orange)" }} />
       </div>
 
-      {/* TEKS */}
-      <div className="flex flex-col items-center text-center md:items-start md:text-left z-10">
-        <h2 className="mb-2 text-lg font-medium text-blue-400 tracking-wider uppercase">Software Engineer | Data & AI/ML Enthusiast</h2>
-        
-        <h1 className="mb-6 text-5xl font-extrabold tracking-tight md:text-7xl">
-          <span className="bg-gradient-to-r from-white via-blue-100 to-gray-400 bg-clip-text text-transparent">
-            Zahran Alvan
-          </span>
-        </h1>
-        
-        <p className="mb-8 max-w-lg text-lg leading-relaxed text-gray-400">
-          I am a Computer Science student at <span className="text-blue-400">Institut Teknologi Bandung</span> with deep fascination for <span className="text-blue-400">Data & AI/ML</span>.
-          However, I believe that powerful AI needs a robust home. Currently, I am dedicating my focus to mastering <span className="text-blue-400">Software Engineering</span> fundamentals from system architecture to clean code. 
-          My goal is to build a strong foundation in creating scalable applications first, so that in the future, I can integrate intelligent AI/ML models into systems that are not just smart, but also reliable and production-ready.
-        </p>
+      {/* Status badge */}
+      <div className="flex items-center gap-2 mb-6 animate-fade-up">
+        <span className="h-2 w-2 rounded-full pulse-dot" style={{ background: "var(--green)", boxShadow: "0 0 6px var(--green)" }} />
+        <span className="text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-mono)", color: "var(--text-muted)" }}>
+          {t.status}
+        </span>
+      </div>
 
-        <a href="/Resume_Zahran-Alvan-Putra-Winarko.pdf" download target="_blank" rel="noopener noreferrer">
-          <button className="relative px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] hover:-translate-y-1 active:scale-95">
-            Download CV
-          </button>
+      {/* Name */}
+      <h1
+        className="text-6xl md:text-7xl leading-tight mb-4 animate-fade-up anim-d1"
+        style={{ fontFamily: "var(--font-serif)", color: "var(--text)" }}
+      >
+        {t.name}
+      </h1>
+
+      {/* Role tags — simple, no description */}
+      <div className="flex flex-wrap items-center gap-2 mb-10 animate-fade-up anim-d2">
+        {t.roleTags.map((tag: string, i: number) => (
+          <span key={tag} className="flex items-center gap-2">
+            <span className="text-sm" style={{ color: "var(--text-muted)" }}>{tag}</span>
+            {i < t.roleTags.length - 1 && (
+              <span className="text-xs" style={{ color: "var(--text-subtle)" }}>·</span>
+            )}
+          </span>
+        ))}
+      </div>
+
+      {/* CTA row: Download CV + social icon buttons */}
+      <div className="flex flex-wrap items-center gap-3 animate-fade-up anim-d3">
+        {/* Download CV */}
+        <a
+          href="/Resume_Zahran-Alvan-Putra-Winarko.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5"
+          style={{
+            background: "var(--accent)",
+            color: "var(--bg)",
+            boxShadow: "0 0 20px color-mix(in srgb, var(--accent) 25%, transparent)",
+          }}
+          onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "var(--accent-hover)"; }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "var(--accent)"; }}
+        >
+          <FileText size={14} />
+          {t.downloadCV}
         </a>
+
+        {/* Social icon buttons */}
+        {socialLinks.map((s) => (
+          <a
+            key={s.label}
+            href={s.href}
+            target={s.href.startsWith("mailto") ? undefined : "_blank"}
+            rel="noopener noreferrer"
+            aria-label={s.label}
+            className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-lg border transition-all duration-200 hover:-translate-y-0.5"
+            style={{ color: "var(--text-muted)", borderColor: "var(--border)", background: "transparent" }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.color = "var(--text)";
+              (e.currentTarget as HTMLElement).style.borderColor = "var(--border-hover)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.color = "var(--text-muted)";
+              (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+            }}
+          >
+            {s.icon}
+            <span className="hidden sm:inline">{s.label}</span>
+          </a>
+        ))}
+      </div>
+
+      {/* Stats */}
+      <div
+        className="flex flex-wrap gap-10 mt-12 pt-8 border-t animate-fade-up anim-d4"
+        style={{ borderColor: "var(--border)" }}
+      >
+        {t.stats.map((s: { value: string; label: string }) => (
+          <div key={s.label}>
+            <p className="text-2xl font-semibold" style={{ color: "var(--text)" }}>{s.value}</p>
+            <p className="text-xs uppercase tracking-widest mt-0.5" style={{ fontFamily: "var(--font-mono)", color: "var(--text-subtle)" }}>
+              {s.label}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
